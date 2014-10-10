@@ -1,7 +1,6 @@
 <?php
 
-	class admin()
-	{
+	class admin{
 		var $username;
 		var $password;
 		
