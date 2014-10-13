@@ -1,8 +1,6 @@
 <?php
 
 	class admin{
-		var $username;
-		var $password;
 		
 		public function admin_login() {
 		session_start ();
