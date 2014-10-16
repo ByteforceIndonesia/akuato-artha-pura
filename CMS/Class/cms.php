@@ -31,35 +31,37 @@ MySQL_QUERY;
 		}
 		
 		public function admin_login () {
-		session_start ();
 		
 		return<<<ADMIN_LOGIN
-	
-		<form action="{$_SERVER['PHP_SELF']}" method="post">
+		
+		<form action="class/login.php" method="post">
       				<label for="username">Username</label>
       				<input name="username" id="username" type="text"/>
       				<label for="password">Password</label>
-      				<input name="password" id="password" type="text"/>
+      				<input name="password" id="password" type="password"/>
       				<input type="submit" value="Login" />
     	</form>
 ADMIN_LOGIN;
-
-		$_SESSION['username']=$username;
-		$_SESSION['password']=$password;
+	
+		include 'login.php';
 		
 		} 
 
 		public function input_admin () {
     		return <<<ADMIN_FORM
 
-    			<form action="{$_SERVER['PHP_SELF']}" method="post">
+    			<form action="{$_SERVER['PHP_SELF']}?admin=3" method="post">
       				<label for="title">Title:</label>
-      				<input name="title" id="title" type="text" maxlength="150" />
+      				<input name="title" id="title" type="text" maxlength="150" /><br>
       				<label for="bodytext">Body Text:</label>
-      				<textarea name="bodytext" id="bodytext"></textarea>
-					<label for="image">Image</label>
+      				<textarea name="bodytext" id="bodytext"></textarea><br>
+					<label for="image">Image</label><br>
       				<input type="submit" value="Create This Entry!" />
     			</form>
+    			
+    			 <p class="admin_link">
+      					<a href="class/logout.php">Logout</a>
+    			 </p>
 
 ADMIN_FORM;
  		}
@@ -82,7 +84,7 @@ ADMIN_FORM;
     				}
 		}
 		
-		public function display_public () {
+		public function home () {
 			$q = "SELECT * FROM testDB ORDER BY created DESC LIMIT 3";
     		$r = mysql_query($q);
 
