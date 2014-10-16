@@ -6,13 +6,23 @@
 </head>
 <body>
 <?php 
-	if (!empty ($_GET)) {
+	if (!empty($_GET['admin'])) {
 	$admin = $_GET['admin'];
+	}elseif (!empty($_GET['p'])){
+	$post = $_GET['p'];
+	}elseif (!empty($_GET['cat'])){
+	$cat = $_GET['cat'];
 	}
 
-	if (empty ($post))
+	if (empty ($post) && empty ($cat) && empty ($admin))
 	{
-		echo 'home';
+		echo 'home';	
+	}elseif ( !empty ($post)){
+		echo 'post';
+	}elseif ( !empty ($cat)){
+		echo 'catagories';
+	}elseif ( !empty ($admin)){
+		echo 'admin';
 	}
 ?>
 </body>
