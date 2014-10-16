@@ -27,7 +27,7 @@
       if ( $_POST )
         $obj->write($_POST);
     
-      echo ( isset ($_GET['admin'] )) ? $obj->display_admin() : $obj->display_public();
+      echo ( isset ($_GET['admin'] )) ? $obj->admin_login() : $obj->display_public();
     
     ?>
 	</div>
