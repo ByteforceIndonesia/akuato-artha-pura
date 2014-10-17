@@ -1,6 +1,11 @@
-<?php
-    <h2>$title</h2>
+<html>
+<body>
+
+    <h2><? $title ?></h2>
     <p>
-      $bodytext
+      <? $bodytext ?>
     </p>
-?>
+    
+    
+</body>
+</html>

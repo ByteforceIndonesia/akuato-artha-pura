@@ -20,6 +20,15 @@
 	include_once('class/input.php');
 	
       $obj = new cms();
+      $db = new database();
+      
+      $db->host = 'localhost';
+      $db->username = 'root';
+      $db->password = '';
+      $db->table = 'cms';
+      
+      if ( $_POST )
+      $db->write($_POST);
     
 
 	if (empty ($post) && empty ($cat) && empty ($admin))
@@ -38,10 +47,10 @@
 			echo $obj->input_admin();
 		}elseif ( $admin == '3')
 		{
-			$db = new database();
-			
-			$db->connect_to_db();
-        	$db->write_to_db();
+			if ( $_POST )
+        
+			$db->connect();
+        	$db->write();
 		}
 	}
 	
