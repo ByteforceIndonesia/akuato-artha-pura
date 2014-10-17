@@ -17,19 +17,9 @@
 	}
 	
 	include_once('class/cms.php');
+	include_once('class/input.php');
 	
       $obj = new cms();
-      
-      /* CHANGE THESE SETTINGS FOR YOUR OWN DATABASE */
-      $obj->host = 'localhost';
-      $obj->username = 'root';
-      $obj->password = '';
-      $obj->table = 'test';
-      
-      $obj->connect();
-    
-      if ( $_POST )
-        $obj->write($_POST);
     
 
 	if (empty ($post) && empty ($cat) && empty ($admin))
@@ -48,7 +38,10 @@
 			echo $obj->input_admin();
 		}elseif ( $admin == '3')
 		{
-			echo $obj->write();
+			$db = new database();
+			
+			$db->connect_to_db();
+        	$db->write_to_db();
 		}
 	}
 	
