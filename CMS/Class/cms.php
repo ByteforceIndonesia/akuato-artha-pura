@@ -65,7 +65,7 @@ MySQL_QUERY;
       $display = include 'html/error.html';
     }
 
-   return $display;
+   $display;
   }
   
 }

@@ -1,6 +1,6 @@
-<?
-	$title=1234;
+<?php
 
-	echo $title, $bodytext;
-    
+echo "<h1>$title</h1>";
+echo "<p>$bodytext</p>";
+
 ?>
