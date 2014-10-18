@@ -1,11 +1,6 @@
-<html>
-<body>
+<?
+	$title=1234;
 
-    <h2><? $title ?></h2>
-    <p>
-      <? $bodytext ?>
-    </p>
+	echo $title, $bodytext;
     
-    
-</body>
-</html>
+?>
