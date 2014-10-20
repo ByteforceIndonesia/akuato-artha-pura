@@ -1,11 +1,27 @@
 <html>
+<head>
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/foundation.css">
+
+<link rel="stylesheet" href="../css/app.css">
 <body>
-<form action="class/login.php" method="post">
-      				<label for="username">Username</label>
-      				<input name="username" id="username" type="text"/>
-      				<label for="password">Password</label>
-      				<input name="password" id="password" type="password"/>
-      				<input type="submit" value="Login" />
-</form>
+<div class="row">
+	<div class="large-12 columns">
+			<form action="class/login.php" method="post">
+			<div class="large-4 columns form">
+      				<label for="username" class="form">Username</label>
+      				<input name="username" id="username" type="text" class="form"/>
+      				<label for="password" class="form">Password</label>
+      				<input name="password" id="password" class="form" type="password"/>
+      				<input type="submit" value="Login" class="form" />
+      		</div>
+			</form>
+	</div>
+</div>
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/foundation.min.js"></script>
+<script>
+      $(document).foundation();
+</script>
 </body>
 </html>

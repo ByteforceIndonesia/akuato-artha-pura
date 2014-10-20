@@ -2,8 +2,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PT. Akuato Artha </title>
-<link rel="stylesheet" type="text/stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PT. Akuato Artha Pura</title>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/foundation.css">
+
+<link rel="stylesheet" href="css/app.css">
+
+<script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
 <?php 
@@ -30,7 +37,15 @@
 
 	if (empty ($post) && empty ($cat) && empty ($admin))
 	{
-		echo $obj->home();	
+		echo $obj->home();
+		echo '
+				<div class="row">
+				<div class="large-4 columns">
+				<p class="admin_link">
+      				<a href="index.php?admin=1">Login Admin</a>
+				</p>
+				</div>
+				</div>';	
 	}elseif ( !empty ($post)){
 		echo 'post';
 	}elseif ( !empty ($cat)){
@@ -41,14 +56,39 @@
 			echo $obj->admin_login();
 		}elseif ( $admin == '2' )
 		{
+			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+
+			header("Cache-Control: private");
+
+			session_start();
+
+			if(!@$_SESSION["login_username"])
+
+			header("location: index.php");
 			echo $obj->input_admin();
+			
 		}elseif ( $admin == '3')
 		{
+			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+
+			header("Cache-Control: private");
+
+			session_start();
+
+			if(!@$_SESSION["login_username"])
+			
+			header("location: index.php");
+			
 			if ( $_POST )
       		$obj->write($_POST);
+      			
 		}
 	}
-	
 ?>
+	<script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
 </body>
 </html>

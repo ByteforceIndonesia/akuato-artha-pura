@@ -43,30 +43,15 @@ MySQL_QUERY;
     if ( $title && $bodytext ) {
       $created = time();
       $sql = "INSERT INTO posts VALUES('$title','$bodytext','$created')";
-      return mysql_query($sql);
+    	mysql_query($sql);
+      header("Location:index.php");
     } else {
       return false;
     }
   }
 		
 		public function home() {
-    $q = "SELECT * FROM posts ORDER BY created DESC LIMIT 3";
-    $r = mysql_query($q);
-
-    if ( $r !== false && mysql_num_rows($r) > 0 ) {
-      while ( $a = mysql_fetch_assoc($r) ) {
-		  global $title, $bodytext;
-        $title = stripslashes($a['title']);
-        $bodytext = stripslashes($a['bodytext']);
-
-        $display = include 'html/home.php';
-      }
-    } else {
-      $display = include 'html/error.html';
-    }
-
-   $display;
-  }
-  
+    include 'html/home.php';
+	}
 }
 ?>
