@@ -1,3 +1,10 @@
 .form {
-margin : 0 auto;
+	padding-top:5em;
+}
+
+.header
+{
+background:#ccc;
+width:100%;
+position:relative;
 }

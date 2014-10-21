@@ -13,7 +13,16 @@
 <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
+<div class="header">
+<div class="row">
+	<div class="large-6 large-centered medium-centered small-centered columns">
+		<br><h1 align="center">PT. Akuato Artha Pura</h1>
+	</div>
+</div>
+</div>
 <?php 
+	
+	global $admin, $post, $cat;
 	
 	if (!empty($_GET['admin'])) {
 	$admin = $_GET['admin'];
@@ -40,14 +49,19 @@
 		echo $obj->home();
 		echo '
 				<div class="row">
+				<div class="large-4 columns"><br></div>
+				<div class="large-4 columns"><br></div>
 				<div class="large-4 columns">
 				<p class="admin_link">
       				<a href="index.php?admin=1">Login Admin</a>
 				</p>
 				</div>
+				
 				</div>';	
 	}elseif ( !empty ($post)){
-		echo 'post';
+		
+		include 'html/post.php';
+		
 	}elseif ( !empty ($cat)){
 		echo 'catagories';
 	}elseif ( !empty ($admin)){

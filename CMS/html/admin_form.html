@@ -1,17 +1,20 @@
 <html>
 <body>
-<form action="index.php?admin=3" method="post">
-      				<label for="title">Title:</label>
-      				<input name="title" id="title" type="text" maxlength="150" /><br>
-      				<label for="bodytext">Body Text:</label>
-      				<textarea name="bodytext" id="bodytext"></textarea><br>
-					<label for="image">Image</label><br>
-      				<input type="submit" value="Create This Entry!" />
-    			</form>
-    			
-    			 <p class="admin_link">
+<div class="row form">
+<div class="large-6 medium-6 small-10 large-centered medium-centered small-centered columns">
+		<form action="index.php?admin=3" method="post" align="left"> 
+      			<label for="title">Title:</label>
+      			<input name="title" id="title" type="text" maxlength="150" /><br>
+      			<label for="bodytext">Body Text:</label>
+      			<textarea name="bodytext" id="bodytext"></textarea><br>
+				<label for="catagories">Catagory:</label><br>
+				
+      			<input type="submit" value="Create This Entry!" class="button"  />
+    	</form>
+    			<p class="admin_link">
       					<a href="class/logout.php">Logout</a>
-    			 </p>
-    			 
+    			</p>
+</div>
+</div>			 
 </body>
 </html>

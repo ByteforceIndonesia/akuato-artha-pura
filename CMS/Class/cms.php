@@ -26,6 +26,7 @@
   private function buildDB() {
     $sql = <<<MySQL_QUERY
 CREATE TABLE IF NOT EXISTS posts (
+id			INT(20),
 title		VARCHAR(150),
 bodytext	TEXT,
 created		VARCHAR(100)
@@ -42,9 +43,10 @@ MySQL_QUERY;
       $bodytext = mysql_real_escape_string($_POST['bodytext']);
     if ( $title && $bodytext ) {
       $created = time();
-      $sql = "INSERT INTO posts VALUES('$title','$bodytext','$created')";
-    	mysql_query($sql);
-      header("Location:index.php");
+      $sql = "INSERT INTO posts VALUES('null','$title','$bodytext','$created')";
+    	$res=mysql_query($sql);
+      header("Location:index.php?admin=2");
+      return $res;
     } else {
       return false;
     }
