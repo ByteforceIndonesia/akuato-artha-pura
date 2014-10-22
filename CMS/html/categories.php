@@ -13,20 +13,31 @@
     $r = mysql_query($q);
     
 		$a = mysql_fetch_assoc($r);
-		global $title, $bodytext,$id,$cat; 
+		global $title, $cat,$id; 
         $title = stripslashes($a['title']);
-        $bodytext = stripslashes($a['bodytext']);
         $cat = stripslashes($a['cat']);
 
         $display = <<<home
-     		<h1>$title</h1>
-     		<h3>Category : $cat</h3>
+     		<h1>$cat</h1>
+home;
+   
+   if ( $r !== false && mysql_num_rows($r) > 0 ) {
+      while ( $a = mysql_fetch_assoc($r) ) {
+		global $title, $cat,$id; 
+        $title = stripslashes($a['title']);
+        $cat = stripslashes($a['cat']);
+        
+        $display .= <<<home
+     		<h1><a href="index.php?p=$id">$title</h1></a>
         	<p>$bodytext</p>
 home;
-
-
-  echo $display; 
-   
+      }
+    } else {
+      $display = include 'error.html';
+    }
+    
+     echo $display; 
+    
 ?>
 </div>
 </div>

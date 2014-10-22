@@ -7,12 +7,18 @@
 <body>
 <div class="row">
 	<div class="large-4 medium-3 small-1 columns"><br></div>
-			<form action="class/login.php" method="post">
+			<form action="class/login.php" method="post" data-abide>
 			<div class="large-4 medium-6 small-10 columns form">
+				<div>
       				<label for="username" class="">Username</label>
-      				<input name="username" id="username" type="text" class=""/>
+      				<input name="username" id="username" type="text" required pattern="alpha_numeric"/>
+      			 	<small class="error">A valid Username is required.</small>
+      			 </div>
+      			 <div>
       				<label for="password" class="">Password</label>
-      				<input name="password" id="password" class="" type="password"/>
+      				<input name="password" id="password" class="" type="password" required/>
+      				<small class="error">A valid password is required.</small>
+      			</div>
       				<input type="submit" value="Login" class=" button" />
       		</div>
 			</form>

@@ -1,8 +1,7 @@
 <html>
 <body>
 <div class="row">
-<div class="large-4 columns"><br></div>
-        <div class="large-4 columns">
+        <div class="large-8 large-centered columns">
 <?php
 
 	mysql_connect('localhost','root','') or die("Could not connect. " . mysql_error());
@@ -37,7 +36,6 @@ home;
    
 ?>
 </div>
-        <div class="large-4 columns"><br></div>
 </div>
 </body>
 </html>

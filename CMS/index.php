@@ -15,7 +15,7 @@
 <body>
 <div class="header">
 <div class="row">
-	<div class="large-6 large-centered medium-centered small-centered columns">
+	<div class="large-12 large-centered medium-centered small-centered columns">
 		<br><h1 align="center">PT. Akuato Artha Pura</h1>
 	</div>
 </div>
@@ -63,7 +63,9 @@
 		include 'html/post.php';
 		
 	}elseif ( !empty ($cat)){
-		echo 'catagories';
+	
+		include 'html/categories.php';
+		
 	}elseif ( !empty ($admin)){
 		if ( $admin == '1' ){
 			session_start ();
