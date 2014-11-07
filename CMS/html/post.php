@@ -46,7 +46,7 @@ home;
 
 
 		echo '	
-      				<a class="admin_linkhref="index.php?admin=1">Login Admin</a>';	
+      				<a class="admin_link" href="index.php?admin=1">Login Admin</a>';	
 
 ?>
 </div>

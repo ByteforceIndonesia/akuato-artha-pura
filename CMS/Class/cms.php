@@ -30,7 +30,8 @@ id			INT(20),
 title		VARCHAR(150),
 bodytext	TEXT,
 cat			VARCHAR(150),
-created		VARCHAR(100)
+created		VARCHAR(100),
+image		VARCHAR(250)
 )
 MySQL_QUERY;
 

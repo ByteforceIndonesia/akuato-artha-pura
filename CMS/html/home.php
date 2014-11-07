@@ -3,6 +3,8 @@
 		PT. AKUATO
 	</div> 
 </div>
+<div class="row">
+	<div class="large-12 large-centered columns">
 <?php
 
 	mysql_connect('localhost','root','') or die("Could not connect. " . mysql_error());
@@ -66,3 +68,5 @@ home;
   echo $display; 
    
 ?>
+</div>
+</div>
