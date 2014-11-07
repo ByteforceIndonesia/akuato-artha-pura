@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PT. Akuato Artha Pura</title>
 
+<link rel="stylesheet" href="css/nday.css">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/foundation.css">
 
@@ -26,7 +27,8 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active"><a href="#">Home</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="index.php?cat=1">Catalouge</a></li>
       <li><a href="#">Company Profile</a></li>
       <li><a href="#">Contacts</a></li>
       </li>
@@ -34,8 +36,18 @@
   </section>
 </nav>
 
-<!-- Start Index -->
+<div id = "" class = "bigSlider">
+
+a
+
 </div>
+
+
+
+
+</div>
+<!-- Start Index -->
+<div id = "" class = "bigContent">
 <?php 
 	
 	global $admin, $post, $cat;
@@ -58,7 +70,6 @@
       	$obj->table = 'cms';
 		
 		$obj->connect();
-    
 
 	if (empty ($post) && empty ($cat) && empty ($admin))
 	{
@@ -78,9 +89,9 @@
 		
 		include 'html/post.php';
 		
-	}elseif ( !empty ($cat)){
+	}elseif ( !empty ($cat == '1')){
 	
-		include 'html/categories.php';
+		include 'html/products.php';
 		
 	}elseif ( !empty ($admin)){
 		if ( $admin == '1' ){
@@ -117,6 +128,10 @@
 		}
 	}
 ?>
+</div>
+<div id = "" class = "bigFooter"><br>Email : aquato@gmail.com // Telp : 021 234 405 // 
+<a class="admin_link" href="index.php?admin=1">Login Admin</a>
+</div>
 	<script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/foundation/foundation.topbar.js"></script>

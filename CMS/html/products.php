@@ -47,19 +47,10 @@
 				<div class = "pieceProductTitle"><font id = "pieceTitle" >Valve type b1216</font>
 				</div>
 			</div>
-		
+		<?php 
+			include 'home.php';
+			?>
 	</div>
-</div>
-<div id = "" class = "bigFooter"><br>Email : aquato@gmail.com // Telp : 021 234 405 // <?php 
-
-if ( $x == 1){
-
-		echo '	
-      				<a class="admin_linkhref="index.php?admin=1">Login Admin</a>';	
-
-}
-
-?>
 </div>
 </body>
 </html>
