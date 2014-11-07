@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PT. Akuato Artha Pura</title>
 
+<link rel="stylesheet" href="css/nday.css">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/foundation.css">
 
@@ -34,8 +35,18 @@
   </section>
 </nav>
 
-<!-- Start Index -->
+<div id = "" class = "bigSlider">
+
+a
+
 </div>
+
+
+
+
+</div>
+<!-- Start Index -->
+<div id = "" class = "bigContent">
 <?php 
 	
 	global $admin, $post, $cat;
@@ -58,7 +69,6 @@
       	$obj->table = 'cms';
 		
 		$obj->connect();
-    
 
 	if (empty ($post) && empty ($cat) && empty ($admin))
 	{
@@ -117,6 +127,7 @@
 		}
 	}
 ?>
+</div>
 	<script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/foundation/foundation.topbar.js"></script>
