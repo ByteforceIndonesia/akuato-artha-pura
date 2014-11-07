@@ -1,3 +1,7 @@
+<div id = "" class = "bigSlider">
+	<div id="" class="textSlider">awdasd</div>
+
+</div>
 <!-- Start Index -->
 <div id = "" class = "bigContent">
 

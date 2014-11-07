@@ -19,7 +19,7 @@
 <nav class="top-bar navi-in" data-topbar role="navigation" data-options="sticky_on: large">
   <ul class="title-area navi-in">
     <li class="name">
-      <h1><a href="#">PT. AKUATO</a></h1>
+      <h1><a href="index.php">PT. AKUATO</a></h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
@@ -29,25 +29,14 @@
     <ul class="right">
       <li><a href="index.php">Home</a></li>
       <li><a href="index.php?cat=1">Catalouge</a></li>
-      <li><a href="#">Company Profile</a></li>
-      <li><a href="#">Contacts</a></li>
+      <li><a href="company-profile.php">Company Profile</a></li>
+      <li><a href="contact.php">Contacts</a></li>
       </li>
     </ul>
   </section>
 </nav>
-
-<div id = "" class = "bigSlider">
-
-a
-
-</div>
-
-
-
-
 </div>
 <!-- Start Index -->
-<div id = "" class = "bigContent">
 <?php 
 	
 	global $admin, $post, $cat;
