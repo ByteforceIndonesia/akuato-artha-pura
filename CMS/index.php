@@ -29,8 +29,8 @@
     <ul class="right">
       <li><a href="index.php">Home</a></li>
       <li><a href="index.php?cat=1">Catalouge</a></li>
-      <li><a href="company-profile.php">Company Profile</a></li>
-      <li><a href="contact.php">Contacts</a></li>
+      <li><a href="index.php?company-profile">Company Profile</a></li>
+      <li><a href="index.php?contact">Contacts</a></li>
       </li>
     </ul>
   </section>

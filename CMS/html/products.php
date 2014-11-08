@@ -1,5 +1,5 @@
 <div id = "" class = "bigSlider">
-	<div id="" class="textSlider">awdasd</div>
+	<div id="" class="textSlider">Catalog</div>
 
 </div>
 <!-- Start Index -->
