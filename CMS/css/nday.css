@@ -25,7 +25,7 @@ text-align : center;
 /* Homepage Slider image */
 .bigSlider{
 width : 100%;
-height : 360px;
+height : 320px;
 background-color : tomato;
 position : relative;
 float:left;
@@ -36,7 +36,7 @@ float:left;
 .textSlider{
 font-family:"corporea";
 font-size:5em;
-padding-top:260px;
+padding-top:220px;
 color:#ffffff;
 padding-left:1em;
 }

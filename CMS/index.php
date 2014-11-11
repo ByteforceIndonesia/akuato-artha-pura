@@ -65,9 +65,7 @@
 		echo $obj->home();
 		echo '
 				<div class="row">
-				<div class="large-4 columns"><br></div>
-				<div class="large-4 columns"><br></div>
-				<div class="large-4 columns">
+				<div class="large-4 large-centered columns">
 				<p class="admin_link">
       				<a href="index.php?admin=1">Login Admin</a>
 				</p>
