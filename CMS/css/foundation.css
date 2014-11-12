@@ -1980,7 +1980,7 @@ meta.foundation-mq-topbar {
       background: #008cba;
       color: white; }
       .top-bar-section ul li.active > a:hover {
-        background: #0078a0;
+        background: #fffdca;
         color: white; }
   .top-bar-section .has-form {
     padding: 15px; }
@@ -2098,7 +2098,7 @@ meta.foundation-mq-topbar {
           display: none; }
     .top-bar-section li.hover > a:not(.button) {
       background-color: #555555;
-      background: #272727;
+      background: #ff846e;
       color: white; }
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 15px;
@@ -2106,7 +2106,7 @@ meta.foundation-mq-topbar {
       background: #e55940; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
         background-color: #555555;
-        background: #272727; }
+        background: #ff846e; }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 15px;
       line-height: 60px;
