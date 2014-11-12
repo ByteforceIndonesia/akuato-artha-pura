@@ -1,7 +1,5 @@
 <div id = "" class = "bigSlider">
-	<div id="" class="textSlider">
-		PT. AKUATO
-	</div> 
+	<div class="row"><div class="large-8 columns"><div id="" class="textSlider">PT. Akuato</div></div></div>
 </div>
 <div class="row">
 	<div class="large-12 large-centered columns">
