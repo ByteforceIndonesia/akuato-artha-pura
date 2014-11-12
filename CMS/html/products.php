@@ -12,54 +12,14 @@
 		</div>
 		
 		<div class = "bigContentProducts">
-			<div class = "pieceProduct">
-				<div class = "pieceProductImage">
-				</div>
-				<div class = "pieceProductTitle"><font id = "pieceTitle" >Valve type b1216</font>
-				</div>
-			</div>
 			
-			<div class = "pieceProduct2">
-				<div class = "pieceProductImage">
-				</div>
-				<div class = "pieceProductTitle"><font id = "pieceTitle" >Valve type b1216</font>
-				</div>
-			</div>
-			
-			<div class = "pieceProduct2">
-				<div class = "pieceProductImage">
-				</div>
-				<div class = "pieceProductTitle"><font id = "pieceTitle" >Valve type b1216</font>
-				</div>
-			</div>
-		
-			<div class = "pieceProduct">
-				<div class = "pieceProductImage">
-				</div>
-				<div class = "pieceProductTitle"><font id = "pieceTitle" >Valve type b1216</font>
-				</div>
-			</div>
-			
-			<div class = "pieceProduct2">
-				<div class = "pieceProductImage">
-				</div>
-				<div class = "pieceProductTitle"><font id = "pieceTitle" >Valve type b1216</font>
-				</div>
-			</div>
-			
-			<div class = "pieceProduct2">
-				<div class = "pieceProductImage">
-				</div>
-				<div class = "pieceProductTitle"><font id = "pieceTitle" >Valve type b1216</font>
-				</div>
-			</div>
 		<?php
 
 	mysql_connect('localhost','root','') or die("Could not connect. " . mysql_error());
     mysql_select_db('cms') or die("Could not select database. " . mysql_error());
 
 
-	$q = "SELECT * FROM posts ORDER BY id DESC LIMIT 10";
+	$q = "SELECT * FROM posts ORDER BY id";
     $r = mysql_query($q);
     
     $display =<<<home
