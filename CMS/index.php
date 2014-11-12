@@ -47,6 +47,10 @@
 	$post = $_GET['p'];
 	}elseif (!empty($_GET['cat'])){
 	$cat = $_GET['cat'];
+	}elseif (!empty($_GET['contact'])){
+	$cat = $_GET['contact'];
+	}elseif (!empty($_GET['company-profile'])){
+	$cat = $_GET['company-profile'];
 	}
 	
 	include_once('class/cms.php');
