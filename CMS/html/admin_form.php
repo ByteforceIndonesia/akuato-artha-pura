@@ -26,7 +26,6 @@
 				
 				<label for="catagories">Catagory:
 					<input type="checkbox" name="cat" value="valve">Valve<br>
-					<input type="checkbox" name="cat" value="test">test<br>
 					
 				</label>
       			<input type="submit" name = "submit" value="Create This Entry!" class="button"  />

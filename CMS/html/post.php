@@ -23,9 +23,6 @@
         	<img src = "image/$image" width = "400px" height = "400px" class = "paragraphImage"/>
 			<p>$bodytext</p>
 home;
-
-
-  // echo $display; 
    
 ?>
 
@@ -40,33 +37,6 @@ home;
 	</div>
 
 			
-</div>
-	
-<div id = "" class = "bigFooter"><br>Email : aquato@gmail.com // Telp : 021 234 405 // <?php 
-
-
-		echo '	
-      				<a class="admin_link" href="index.php?admin=1">Login Admin</a>';	
-
-?>
-</div>
-       <!-- 
-<div class="row">
-        <div class="large-8 large-centered columns">
-</div>
-</div>
-<div class="row">
-				<div class="large-4 columns"><br></div>
-				<div class="large-4 columns"><br></div>
-				<div class="large-4 columns">
-				<p class="link">
-      				<a href="index.php">Home</a>
-      				<a href="index.php?admin=1">Login Admin</a>
-				</p>
-				</div>
-				
-				
-				->
 </div>
 </body>
 </html>

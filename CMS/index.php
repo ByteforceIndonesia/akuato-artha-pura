@@ -29,8 +29,8 @@
     <ul class="right">
       <li><a href="index.php">Home</a></li>
       <li><a href="index.php?cat=1">Catalouge</a></li>
-      <li><a href="index.php?company-profile">Company Profile</a></li>
-      <li><a href="index.php?contact">Contacts</a></li>
+      <li><a href="index.php?company-profile=1">Company Profile</a></li>
+      <li><a href="index.php?contact=1">Contacts</a></li>
       </li>
     </ul>
   </section>
@@ -48,9 +48,9 @@
 	}elseif (!empty($_GET['cat'])){
 	$cat = $_GET['cat'];
 	}elseif (!empty($_GET['contact'])){
-	$cat = $_GET['contact'];
+	$contact = $_GET['contact'];
 	}elseif (!empty($_GET['company-profile'])){
-	$cat = $_GET['company-profile'];
+	$company = $_GET['company-profile'];
 	}
 	
 	include_once('class/cms.php');
@@ -64,18 +64,10 @@
 		
 		$obj->connect();
 
-	if (empty ($post) && empty ($cat) && empty ($admin))
+	if (empty ($post) && empty ($cat) && empty ($admin) && empty ($contact) && empty ($company))
 	{
 		echo $obj->home();
-		echo '
-				<div class="row">
-				<div class="large-4 large-centered columns">
-				<p class="admin_link">
-      				<a href="index.php?admin=1">Login Admin</a>
-				</p>
-				</div>
-				
-				</div>';	
+			
 	}elseif ( !empty ($post)){
 		
 		include 'html/post.php';
@@ -85,11 +77,15 @@
 		include 'html/products.php';
 		
 	}elseif ( !empty ($admin)){
+		
 		if ( $admin == '1' ){
+			
 			session_start ();
 			echo $obj->admin_login();
+			
 		}elseif ( $admin == '2' )
 		{
+			
 			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
 
 			header("Cache-Control: private");
@@ -117,10 +113,18 @@
       		$obj->write($_POST);
       			
 		}
+	}elseif ( !empty ($company)){
+		
+		include 'html/company-profile.php';
+		
+	}elseif ( !empty ($contact)){
+		
+		include 'html/contact.php';
+		
 	}
 ?>
 </div>
-<div id = "" class = "bigFooter"><br>Email : aquato@gmail.com // Telp : 021 234 405 // 
+<div id = "" class = "bigFooter">Email : aquato@gmail.com // Telp : 021 234 405 // 
 <a class="admin_link" href="index.php?admin=1">Login Admin</a>
 </div>
 	<script src="js/vendor/jquery.js"></script>
