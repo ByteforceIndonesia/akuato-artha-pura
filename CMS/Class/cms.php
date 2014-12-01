@@ -49,7 +49,7 @@ MySQL_QUERY;
 	  
 	 //image2wbmp
 	 
-	 $target_dir = "image/";
+	 $target_dir = "/image/";
 			
 			$filetype = substr($_FILES["fileToUpload"]["name"], -4);
 			$filename2 = date('mdyHms') . $filetype; 
@@ -71,7 +71,8 @@ MySQL_QUERY;
 			
 			
 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-				echo "File is valid, and was successfully uploaded.\n";
+				echo "File is valid, and was successfully uploaded.\n ";
+				echo printf;
 			} else {
 				echo "Possible file upload attack!\n";
 			}
