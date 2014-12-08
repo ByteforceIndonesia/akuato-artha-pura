@@ -29,15 +29,26 @@ height : 320px;
 background-color : tomato;
 position : relative;
 float:left;
-
-
+background:url('image/pattern.png');
 }
+
 
 .textSlider{
 font-family:"corporea";
 font-size:5em;
 padding-top:220px;
 color:#ffffff;
+
+background:url('image/header.png');
+background-size:100% 100%;
+background-repeat:no-repeat;
+}
+
+.Profile
+{
+background:url('image/header_profile.png');
+background-size:100% 100%;
+background-repeat:no-repeat;
 }
 
 .bigSliderPages{
@@ -51,6 +62,7 @@ float:left;
 }
 
 .bigContent{
+margin-top:2em;
 width : 100%;
 height : auto;
 background-color : white;

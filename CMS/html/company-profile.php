@@ -1,5 +1,5 @@
 <div id = "" class = "bigSlider">
-	<div class="row"><div class="large-8 columns"><div id="" class="textSlider">Company Profile</div></div></div>
+	<div class="row"><div class="large-10 large-centered columns"><div id="" class="textSlider Profile"><br></div></div></div>
 </div>
 <!-- Start Index -->
 <div class="row">
