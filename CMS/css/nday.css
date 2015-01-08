@@ -1,10 +1,14 @@
 /* Fonts */
 @font-face {
     font-family: corporea;
-    src: url("fonts/corporea.ttf");
+    src: url("fonts/corporea.TTF");
 }
 
 /* Start CSS */
+body{	
+font-family:"Trebuchet MS", Helvetica;
+}
+	
 #insImageFr {
 width : 300px;
 height : 300px;
@@ -25,7 +29,7 @@ text-align : center;
 /* Homepage Slider image */
 .bigSlider{
 width : 100%;
-height : 320px;
+height : auto;
 background-color : #E64A19;
 position : relative;
 float:left;
@@ -36,18 +40,21 @@ background:url('image/pattern.png');
 .textSlider{
 font-family:"corporea";
 font-size:5em;
-padding-top:220px;
+padding-top : 220px;
 color:#ffffff;
-
-background:url('image/header.png');
-background-size:100% 100%;
-background-repeat:no-repeat;
 }
 
 .Profile
 {
 background:url('image/header_profile.png');
-background-size:100% 100%;
+background-size:100%;
+background-repeat:no-repeat;
+}
+
+.home
+{
+background:url('image/tes.png');
+background-size:100%;
 background-repeat:no-repeat;
 }
 
@@ -75,14 +82,13 @@ float:left;
 /* Products page */
 
 .bigContentWrapper{
-width : 960px;
+width : 100%;
 height : auto;
 background-color : white;
 position : relative;
 float : left;
 left : 50%;
 margin-left : -480px;
-margin-top : 50px;
 
 
 
@@ -164,7 +170,7 @@ font-size : 144%;
 
 .bigFooter{
 width : 100%;
-height : 60px;
+height : 65px;
 background-color : #E64A19;
 position : fixed;
 float : left;
@@ -194,7 +200,7 @@ width : 400px;
 height : 400px;
 position : relative;
 float : left;
-
+margin:0 auto;
 
 }
 
@@ -208,14 +214,9 @@ float : left;
 
 }
 .contentDesc {
-width : 960px;
-margin-top : 30px;
+width : 400;
+height : 400px;
+margin-left : 30px;
 position : relative;
 float : left;
-left : 50%;
-margin-left : -480px;
-padding-bottom : 50px;
-
-
 }
-

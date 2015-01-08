@@ -5311,7 +5311,6 @@ ul.off-canvas-list {
 table {
   background: white;
   margin-bottom: 1.25rem;
-  border: solid 1px #dddddd;
   table-layout: auto; }
   table caption {
     background: transparent;
@@ -5341,7 +5340,10 @@ table {
     color: #222222;
     text-align: left; }
   table tr.even, table tr.alt, table tr:nth-of-type(even) {
-    background: #f9f9f9; }
+    background: #f9f9f9; 
+	border-bottom: 1px solid #cdd0d4;
+	border-top: 1px solid #cdd0d4;
+	}
   table thead tr th,
   table tfoot tr th,
   table tfoot tr td,

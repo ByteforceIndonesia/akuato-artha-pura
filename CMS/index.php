@@ -3,13 +3,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PT. Akuato Artha Pura</title>
-
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
 <link rel="stylesheet" href="css/nday.css">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/foundation.css">
 
 <link rel="stylesheet" href="css/app.css">
+
+<!-- made by www.metatags.org -->
+<meta name="description" content="PT Akuato Artha Pura Hadir untuk menjawab kebutuhan pasar industri dalam bidang valve, Fitting, juga meng-instrumentasikannya." />
+<meta name="keywords" content="Akuator, Akuato Artha, Valve, Fitting, Pneumatic, Pump, Hydrolic Pump, Actuator, Indonesia, Transmitter, Frans Theda, Swagelok, Haskel, Daniel Orifice, Fisher, Nuflo Flow Meter, Bettis Pneumatic Actuator, Solenoid Valve, Asco, Ascroft" />
+<meta name="author" content="metatags generator">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 days">
+<title>PT Akuato Artha Pura</title>
+<!-- Akuator, Valve, Fitting -->
 
 <script src="js/vendor/modernizr.js"></script>
 </head>
@@ -57,10 +67,10 @@
 	
       $obj = new cms();
 	  
-	  	$obj->host = 'localhost';
-      	$obj->username = 'root';
-      	$obj->password = '';
-      	$obj->table = 'cms';
+	$obj->host = 'localhost';
+      	$obj->username = 'k6958942_cmsuser';
+      	$obj->password = 'cmsuser';
+      	$obj->table = 'k6958942_cmsre';
 		
 		$obj->connect();
 
@@ -72,7 +82,7 @@
 		
 		include 'html/post.php';
 		
-	}elseif ( !empty ($cat == '1')){
+	}elseif ( !empty ($cat)){
 	
 		include 'html/products.php';
 		
@@ -124,14 +134,15 @@
 	}
 ?>
 </div>
-<div id = "" class = "bigFooter">Email : aquato@gmail.com // Telp : 021 234 405 // 
-<a class="admin_link" href="index.php?admin=1">Login Admin</a>
+<div id = "" class = "bigFooter"><div class="row">Email : akuatoarthapura@akuator.com // Telp : +6221 451 4951 // 
+<a class="admin_link" href="index.php?admin=1">Login Admin</a></div>
 </div>
-	<script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/foundation/foundation.topbar.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+
+	<script src="js/foundation.min.js"></script>
+    	<script src="js/foundation/foundation.topbar.js"></script>
+    
+    	<script>
+     		 $(document).foundation();
+    	</script>
 </body>
 </html>

@@ -18,3 +18,14 @@ height:60px;
 {
 height:100%;
 }
+
+@media screen and (max-width: 720px) {
+   .bigFooter{
+		height : 80px;
+		}
+}
+
+.expanded
+{
+	z-index:1000;
+}

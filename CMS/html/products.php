@@ -1,25 +1,23 @@
-
 <div id = "" class = "bigSlider">
 <div class="row">
-	<div id="" class="textSlider">Catalog</div>		
+<div class="large-10 large-centered columns"><img src = "../css/image/header_profile.png" width = "100%" /></div></div></div>	
 </div>
 
 </div>
 <!-- Start Index -->
-<div class="row">
-        <div class="large-8 large-centered columns">
-<div id = "" class = "bigContent">
+<div class="row"style = "padding-bottom : 100px;">
+        <div class="large-12 large-centered columns">
 
-	<div class = "bigContentWrapper">
-		<div class = "bigContentText">Kami menjual berbagai Produk Valve yang dapat digunakan dalam berbagai bidang kebutuhan. Valve kami mencakup bidang perminyakan, pipa bawah tanah, pipa permurnian, pipa proses DOW, pipa proses DOWN dan banyak valve lain. Jika anda ingin tahu lebih jelas anda bisa menghubungi kami di : 09123401234.
+	<div class = "bigContentWrapper"><h1>Catalouge</h1>
+		<div class = "bigContentText">Kami menjual berbagai Produk Instrument, Valve &fitting yang dapat digunakan dalam berbagai bidang kebutuhan. Instument dan Valve kami mencakup bidang industri, perminyakan, gas, prosesdan banyak valve lain. Jika anda ingin tahu lebih jelas anda bisa menghubungi kami di : +6281289232325 atau di 0214514951. 
 		</div>
-		
-		<div class = "bigContentProducts">
-			
+		<div class="row">
+		<div class="large-12 medium-8 small-8 small-centered medium-centered large-centered columns">
+			<br><BR><BR>
 		<?php
 
-	mysql_connect('localhost','root','') or die("Could not connect. " . mysql_error());
-    mysql_select_db('cms') or die("Could not select database. " . mysql_error());
+	mysql_connect('localhost','k6958942_cmsuser','cmsuser') or die("Could not connect. " . mysql_error());
+    mysql_select_db('k6958942_cmsre') or die("Could not select database. " . mysql_error());
 
 
 	$q = "SELECT * FROM posts ORDER BY id";
@@ -44,7 +42,7 @@ home;
 		
         $display .= <<<home
 			<a href="index.php?p=$id">
-     		<div class = "pieceProduct">
+     		<div class = "large-4 columns">
 				<div class = "pieceProductImage">
 					<img src = "image/$boximage" width = "100%" height = "300px"/>
 				</div>
@@ -58,7 +56,7 @@ home;
 	
         $display .= <<<home
 			<a href="index.php?p=$id">
-     		<div class = "pieceProduct2">
+     		<div class = "large-4 columns">
 				<div class = "pieceProductImage">
 					<img src = "image/$boximage" width = "100%" height = "300px"/>
 				</div>
@@ -79,10 +77,14 @@ home;
   echo $display; 
    
 ?>
+<br><BR><br><BR><br><BR>
 
 	</div>
+	</div>
 </div>
+<br><BR><br><BR>
 </div>
+<br><BR>
 </div>
 </body>
 </html>

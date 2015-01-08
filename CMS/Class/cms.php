@@ -17,7 +17,7 @@
  		}
 		
 		public function connect() {
-    mysql_connect($this->host,$this->username,$this->password) or die("Could not connect. " . mysql_error());
+    mysql_connect($this->host,$this->username,$this->password) or die("Could not connecasdt. " . mysql_error());
     mysql_select_db($this->table) or die("Could not select database. " . mysql_error());
 
     return $this->buildDB();
@@ -69,12 +69,12 @@ MySQL_QUERY;
 				}
 			}
 			
-			
-			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"],  "/home/k6958942/public_html/image/" . $filename2)) {
 				echo "File is valid, and was successfully uploaded.\n ";
 				echo printf;
 			} else {
-				echo "Possible file upload attack!\n";
+				echo "Possible file upload attack!\n" . $_FILES["fileToUpload"]["error"];
+echo getcwd();
 			}
 	 
 	 
