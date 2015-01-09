@@ -16,8 +16,8 @@
 			<br><BR><BR>
 		<?php
 
-	mysql_connect('localhost','k6958942_cmsuser','cmsuser') or die("Could not connect. " . mysql_error());
-    mysql_select_db('k6958942_cmsre') or die("Could not select database. " . mysql_error());
+	mysql_connect('localhost','root','') or die("Could not connect. " . mysql_error());
+    mysql_select_db('test') or die("Could not select database. " . mysql_error());
 
 
 	$q = "SELECT * FROM posts ORDER BY id";

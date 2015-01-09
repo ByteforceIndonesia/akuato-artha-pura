@@ -1,5 +1,5 @@
-<div id = "" class = "bigSlider" >
-	<div class="row"><div class="large-12 large-centered columns"><img src = "../css/image/tes.png" width = "100%" /></div></div>
+<div id = "" class = "bigSlider" data-stellar-background-ratio="0.1">
+	<div class="row"><div class="large-12 large-centered columns"><img src = "css/image/tes.png" width = "100%" /></div></div>
 </div>
 <div class="row" style = "position : relative;padding-bottom : 100px;">
 	<div class="large-12 large-centered columns">
@@ -10,8 +10,8 @@ PT Akuato menjual berbagai macam instrument, valve, & fitting berkualitas tinggi
 <div class="large-12 medium-10 small-8 small-centered medium-centered large-centered columns"><br><br><br>
 <?php
 
-	mysql_connect('localhost','k6958942_cmsuser','cmsuser') or die("Could not connect. " . mysql_error());
-    mysql_select_db('k6958942_cmsre') or die("Could not select database. " . mysql_error());
+	mysql_connect('localhost','root','') or die("Could not connect. " . mysql_error());
+    mysql_select_db('test') or die("Could not select database. " . mysql_error());
 
 
 	$q = "SELECT * FROM posts ORDER BY id DESC LIMIT 10";

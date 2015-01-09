@@ -22,6 +22,17 @@
 <!-- Akuator, Valve, Fitting -->
 
 <script src="js/vendor/modernizr.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script>
+	$(function() { 
+	//Initialize Stellar
+	$.stellar({
+        horizontalScrolling: false,
+	});
+});
+
+
+</script>
 </head>
 <body>
 <div class="contain-to-grid navi">
@@ -68,9 +79,9 @@
       $obj = new cms();
 	  
 	$obj->host = 'localhost';
-      	$obj->username = 'k6958942_cmsuser';
-      	$obj->password = 'cmsuser';
-      	$obj->table = 'k6958942_cmsre';
+      	$obj->username = 'root';
+      	$obj->password = '';
+      	$obj->table = 'test';
 		
 		$obj->connect();
 
