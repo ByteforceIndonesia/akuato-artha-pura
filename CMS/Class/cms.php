@@ -7,15 +7,26 @@
   		var $password;
   		var $table;
 		
+		
+		<!-- Admin Page -->
+		
 		public function admin_login () {
 			include_once 'html/admin_login.php';
-		
 		} 
 
-		public function input_admin () {
-    		include_once 'html/admin_form.php';
+		public function home_admin () {
+    		include_once 'html/admin.php';
  		}
-		
+ 		
+ 		public function edit_add_new () {
+ 		include_once 'html/admin_form_add.php';
+ 		}
+ 		
+ 		public function edit_contacts () {
+ 		include_once 'html/admin_form_contacts.php';
+ 		}
+ 		
+ 				
 		public function connect() {
     mysql_connect($this->host,$this->username,$this->password) or die("Could not connecasdt. " . mysql_error());
     mysql_select_db($this->table) or die("Could not select database. " . mysql_error());

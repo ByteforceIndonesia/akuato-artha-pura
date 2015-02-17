@@ -18,7 +18,7 @@
 <meta name="author" content="metatags generator">
 <meta name="robots" content="index, follow">
 <meta name="revisit-after" content="1 days">
-<title>PT Akuato Artha Pura</title>
+<title>PT Akuato Artha Pura - Admin</title>
 <!-- Akuator, Valve, Fitting -->
 
 <script src="js/vendor/modernizr.js"></script>
@@ -40,7 +40,7 @@
 <nav class="top-bar navi-in" data-topbar role="navigation" data-options="sticky_on: large">
   <ul class="title-area navi-in">
     <li class="name">
-      <h1><a href="index.php">PT. AKUATO</a></h1>
+      <h1><a href="index.php">PT. AKUATO - Admin</a></h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
@@ -60,56 +60,72 @@
 <!-- Start Index -->
 <?php 
 	
-	global $admin, $post, $cat;
+	global $edit;
 	
-	if (!empty($_GET['admin'])) {
-	$admin = $_GET['admin'];
-	}elseif (!empty($_GET['p'])){
-	$post = $_GET['p'];
-	}elseif (!empty($_GET['cat'])){
-	$cat = $_GET['cat'];
-	}elseif (!empty($_GET['contact'])){
-	$contact = $_GET['contact'];
-	}elseif (!empty($_GET['company-profile'])){
-	$company = $_GET['company-profile'];
-	}
+	if (!empty($_GET['edit'])) {
+	$admin = $_GET['edit'];
 	
 	include_once('class/cms.php');
 	
-      $obj = new cms();
+      	$obj = new cms();
 	  
-	$obj->host = 'localhost';
+		$obj->host = 'localhost';
       	$obj->username = 'root';
       	$obj->password = '';
       	$obj->table = 'test';
-		
 		$obj->connect();
 
-	if (empty ($post) && empty ($cat) && empty ($admin) && empty ($contact) && empty ($company))
+	if (empty ($edit))
 	{
-		echo $obj->home();
+		echo $obj->home_admin();
 			
-	}elseif ( !empty ($post)){
+	}elseif ( !empty ($edit)){
 		
-		include 'html/post.php';
-		
-	}elseif ( !empty ($cat)){
-	
-		include 'html/products.php';
-		
-	}elseif ( !empty ($admin)){
-		
-			session_start ();
-			echo $obj->admin_login();
+		if ( $edit == '1' ){
 			
-	}elseif ( !empty ($company)){
-		
-		include 'html/company-profile.php';
-		
-	}elseif ( !empty ($contact)){
-		
-		include 'html/contact.php';
-		
+			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+
+			header("Cache-Control: private");
+
+			session_start();
+
+			if(!@$_SESSION["login_username"])
+			
+			echo $obj->edit_add_new();
+			
+			
+		}elseif ( $edit == '2' )
+		{
+			
+			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+
+			header("Cache-Control: private");
+
+			session_start();
+
+			if(!@$_SESSION["login_username"])
+
+			echo $obj->edit_contacts();
+			
+			if ( $_POST )
+      		$obj->write($_POST)
+			
+		}elseif ( $edit == '3')
+		{
+			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+
+			header("Cache-Control: private");
+
+			session_start();
+
+			if(!@$_SESSION["login_username"])
+			
+			header("location: index.php");
+			
+			if ( $_POST )
+      		$obj->write($_POST);
+      			
+		}
 	}
 ?>
 </div>
