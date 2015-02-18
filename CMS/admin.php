@@ -1,3 +1,17 @@
+<?php
+
+			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+
+			header("Cache-Control: private");
+
+			session_start();
+
+			if(!@$_SESSION["login_username"])
+
+			header("location: index.php");
+			
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +54,7 @@
 <nav class="top-bar navi-in" data-topbar role="navigation" data-options="sticky_on: large">
   <ul class="title-area navi-in">
     <li class="name">
-      <h1><a href="index.php">PT. AKUATO - Admin</a></h1>
+      <h1><a href="index.php">PT. AKUATO - ADMIN</a></h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
@@ -48,10 +62,11 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><a href="index.php">Home</a></li>
-      <li><a href="index.php?cat=1">Catalouge</a></li>
-      <li><a href="index.php?company-profile=1">Company Profile</a></li>
-      <li><a href="index.php?contact=1">Contacts</a></li>
+      <li><a href="admin.php">Admin Home</a></li>
+      <li><a href="admin.php?edit=1">Add New Post</a></li>
+      <li><a href="admin.php?edit=3">Edit Posts</a></li>
+      <li><a href="admin.php?edit=2">Edit Contacts</a></li>
+      <li><a href="admin.php?edit=4">Edit Company Profile</a></li>
       </li>
     </ul>
   </section>
@@ -105,10 +120,12 @@
 
 			if(!@$_SESSION["login_username"])
 
+			header("location: index.php");
+			
 			echo $obj->edit_contacts();
 			
 			if ( $_POST )
-      		$obj->write($_POST)
+      		$obj->write($_POST);
 			
 		}elseif ( $edit == '3')
 		{
@@ -122,15 +139,53 @@
 			
 			header("location: index.php");
 			
+			echo $obj->edit_post();
+			
+			if ( $_POST )
+      		$obj->write($_POST);
+      			
+		}elseif ( $edit == '4')
+		{
+			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+
+			header("Cache-Control: private");
+
+			session_start();
+
+			if(!@$_SESSION["login_username"])
+			
+			header("location: index.php");
+			
+			echo $obj->edit_company_profile();
+			
+			if ( $_POST )
+      		$obj->write($_POST);
+      			
+		}elseif ( $edit == '5')
+		{
+			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+
+			header("Cache-Control: private");
+
+			session_start();
+
+			if(!@$_SESSION["login_username"])
+			
+			header("location: index.php");
+			
+			echo $obj->edit_add_new();
+			
 			if ( $_POST )
       		$obj->write($_POST);
       			
 		}
+		
 	}
+}
 ?>
 </div>
 <div id = "" class = "bigFooter"><div class="row">Email : akuatoarthapura@akuator.com // Telp : +6221 451 4951 // 
-<a class="admin_link" href="index.php?admin=1">Login Admin</a></div>
+<a class="admin_link" href="index.php?admin=2">Logout Admin</a></div>
 </div>
 
 	<script src="js/foundation.min.js"></script>

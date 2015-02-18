@@ -10,11 +10,11 @@ session_start();
     if($count!="")
     {
     $_SESSION['login_username']=$user;
-    header("Location:../index.php?admin=2"); 
+    header("Location:../admin.php"); 
     }
     else
     {
-    	header("Location:../admin.php");
+    	header("Location:../index.php");
     }
     
 

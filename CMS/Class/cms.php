@@ -7,23 +7,28 @@
   		var $password;
   		var $table;
 		
-		
-		<!-- Admin Page -->
-		
 		public function admin_login () {
 			include_once 'html/admin_login.php';
 		} 
+		
+		public function admin_logout () {
+			include_once 'class/logout.php';
+		}
 
 		public function home_admin () {
-    		include_once 'html/admin.php';
+    		include_once 'html/home_admin.php';
  		}
  		
  		public function edit_add_new () {
- 		include_once 'html/admin_form_add.php';
+ 			include_once 'html/admin_form_add.php';
+ 		}
+ 		
+ 		public function edit_post () {
+ 			include_once 'html/admin_form_edit.php';
  		}
  		
  		public function edit_contacts () {
- 		include_once 'html/admin_form_contacts.php';
+ 			include_once 'html/admin_form_contacts.php';
  		}
  		
  				

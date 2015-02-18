@@ -98,9 +98,18 @@
 		include 'html/products.php';
 		
 	}elseif ( !empty ($admin)){
-		
+	
+		if ( $admin == '1' ){
+			
 			session_start ();
 			echo $obj->admin_login();
+			
+		}elseif ( $admin == '2' ){
+		
+			session_start ();
+			echo $obj->admin_logout();
+		
+		}
 			
 	}elseif ( !empty ($company)){
 		
