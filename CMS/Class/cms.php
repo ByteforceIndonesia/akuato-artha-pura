@@ -94,37 +94,80 @@ MySQL_QUERY;
 				echo printf;
 			} else {
 				echo "Possible file upload attack!\n" . $_FILES["fileToUpload"]["error"];
-echo getcwd();
+				echo getcwd();
 			}
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 //image2wbmp
-	  
-	  
-	  
-	  
-    if ( $title && $bodytext && $cat) {
-      $created = time();
-      $sql = "INSERT INTO posts VALUES('null','$title','$bodytext','$cat','$created', '$filename2')";
-    	$res=mysql_query($sql);
-		if (!$res) {
-    die('Invalid query: ' . mysql_error());
-}
+	 		//image2wbmp
+    		if ( $title && $bodytext && $cat) {
+      			$created = time();
+      			$sql = "INSERT INTO posts VALUES('null','$title','$bodytext','$cat','$created', '$filename2')";
+    			$res=mysql_query($sql);
+			if (!$res) {
+    			die('Invalid query: ' . mysql_error());
+			}
 
-      header("Location:index.php?admin=2&hehe=asdf");
-      return $res;
-    } else {
-      return false;
-    }
-  }
+      			header("Location:index.php?admin=2&hehe=asdf");
+      			return $res;
+    		} else {
+      			return false;
+    		}
+  		}
+		
+		public function edit() {
+    if ( $_POST['title'] )
+      $title = mysql_real_escape_string($_POST['title']);
+    if ( $_POST['bodytext'])
+      $bodytext = mysql_real_escape_string($_POST['bodytext']);
+    if ( $_POST['cat'])
+      $cat = mysql_real_escape_string($_POST['cat']);
+	  
+	  
+	 //image2wbmp
+	 
+	 $target_dir = "/image/";
+			
+			$filetype = substr($_FILES["fileToUpload"]["name"], -4);
+			$filename2 = date('mdyHms') . $filetype; 
+			
+			$target_file = $target_dir . $filename2;
+			$uploadOk = 1;
+			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+			// Check if image file is a actual image or fake image
+			if(isset($_POST["submit"])) {
+				$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+				if($check !== false) {
+					echo "File is an image - " . $check["mime"] . ".";
+					$uploadOk = 1;
+				} else {
+					echo "File is not an image.";
+					$uploadOk = 0;
+				}
+			}
+			
+			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"],  "/home/k6958942/public_html/image/" . $filename2)) {
+				echo "File is valid, and was successfully uploaded.\n ";
+				echo printf;
+			} else {
+				echo "Possible file upload attack!\n" . $_FILES["fileToUpload"]["error"];
+				echo getcwd();
+			}
+	 		//image2wbmp
+    		if ( $title && $bodytext && $cat) {
+      			$created = time();
+      			$sql = "UPDATE posts SET title = '$title', bodytext = '$bodytext', image = '$filename2' WHERE id = '$id';";
+    			$res=mysql_query($sql);
+			if (!$res) {
+    			die('Invalid query: ' . mysql_error());
+			}
+
+      			header("Location:index.php?admin=2&hehe=asdf");
+      			return $res;
+    		} else {
+      			return false;
+    		}
+  		}
 		
 		public function home() {
-    include 'html/home.php';
-	}
+    		include 'html/home.php';
+		}
 }
 ?>

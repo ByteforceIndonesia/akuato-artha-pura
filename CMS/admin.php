@@ -119,7 +119,7 @@
 			echo $obj->edit_contacts();
 			
 			if ( $_POST )
-      		$obj->write($_POST);
+      		$obj->edit($_POST);
 			
 		}elseif ( $edit == '3')
 		{
@@ -157,6 +157,15 @@
 			if ( $_POST )
       		$obj->write($_POST);
       			
+		}elseif ( $edit == '6')
+		{
+
+			if(!@$_SESSION["login_username"])
+			
+			header("location: index.php");
+			
+			echo $obj->edit_delete_post();
+			
 		}
 		
 	}
