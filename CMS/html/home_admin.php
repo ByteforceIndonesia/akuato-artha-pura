@@ -1,9 +1,6 @@
-<div id = "" class = "bigSlider" data-stellar-background-ratio="0.1">
-	<div class="row"><div class="large-12 large-centered columns"><img src = "css/image/tes.png" width = "100%" /></div></div>
-</div>
 <div class="row" style = "position : relative;padding-bottom : 100px;">
 	<div class="large-12 large-centered columns">
-<div class="large-12 medium-10 small-8 small-centered medium-centered large-centered columns"><br><br><br>
+<div class="large-12 medium-10 small-8 small-centered medium-centered large-centered columns"><br>
 <?php
 
 	mysql_connect('localhost','root','') or die("Could not connect. " . mysql_error());

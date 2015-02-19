@@ -78,7 +78,8 @@
 	global $edit;
 	
 	if (!empty($_GET['edit'])) {
-	$admin = $_GET['edit'];
+	$edit = $_GET['edit'];
+	}
 	
 	include_once('class/cms.php');
 	
@@ -97,26 +98,19 @@
 	}elseif ( !empty ($edit)){
 		
 		if ( $edit == '1' ){
-			
-			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-
-			header("Cache-Control: private");
-
-			session_start();
 
 			if(!@$_SESSION["login_username"])
 			
+			header("location: index.php");
+			
 			echo $obj->edit_add_new();
+			
+			if ( $_POST )
+      		$obj->write($_POST);
 			
 			
 		}elseif ( $edit == '2' )
 		{
-			
-			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-
-			header("Cache-Control: private");
-
-			session_start();
 
 			if(!@$_SESSION["login_username"])
 
@@ -129,11 +123,6 @@
 			
 		}elseif ( $edit == '3')
 		{
-			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-
-			header("Cache-Control: private");
-
-			session_start();
 
 			if(!@$_SESSION["login_username"])
 			
@@ -146,11 +135,6 @@
       			
 		}elseif ( $edit == '4')
 		{
-			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-
-			header("Cache-Control: private");
-
-			session_start();
 
 			if(!@$_SESSION["login_username"])
 			
@@ -163,17 +147,12 @@
       			
 		}elseif ( $edit == '5')
 		{
-			header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-
-			header("Cache-Control: private");
-
-			session_start();
 
 			if(!@$_SESSION["login_username"])
 			
 			header("location: index.php");
 			
-			echo $obj->edit_add_new();
+			echo $obj->edit_post_form();
 			
 			if ( $_POST )
       		$obj->write($_POST);
@@ -181,7 +160,6 @@
 		}
 		
 	}
-}
 ?>
 </div>
 <div id = "" class = "bigFooter"><div class="row">Email : akuatoarthapura@akuator.com // Telp : +6221 451 4951 // 

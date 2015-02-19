@@ -20,10 +20,14 @@
  		}
  		
  		public function edit_add_new () {
- 			include_once 'html/admin_form_add.php';
+ 			include_once 'html/admin_add.php';
  		}
  		
- 		public function edit_post () {
+ 		public function edit_post(){
+ 			include_once 'html/admin_edit.php';
+ 		}
+ 		
+ 		public function edit_post_form () {
  			include_once 'html/admin_form_edit.php';
  		}
  		

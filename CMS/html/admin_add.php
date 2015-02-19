@@ -1,12 +1,9 @@
 <html>
-<head>
-
-
-</head>
 <body>
 <div class="row form">
 <div class="large-6 medium-6 small-10 large-centered medium-centered small-centered columns">
-		<form action="index.php?admin=3" method="post" align="left" enctype="multipart/form-data" data-abide> 
+	<h2 align="center">Add New Post</h2>
+		<form action="admin.php?admin=2" method="post" align="left" enctype="multipart/form-data" data-abide> 
 		<div class="row collapse">
 			<div class="large-2 small-3 columns">
       			<span class="prefix ">Title:</span></div>
@@ -28,12 +25,11 @@
 					<input type="checkbox" name="cat" value="valve">Valve<br>
 					
 				</label>
-      			<input type="submit" name = "submit" value="Create This Entry!" class="button"  />
+      			<input type="submit" name = "submit" value="Create This Entry!" class="button"  /><br><Br>
     	</form>
     			<p class="admin_link">
       					<a href="class/logout.php">Logout</a>
     			</p>
-<div class="row collapse">
 </div>
 </div>
 </body>
