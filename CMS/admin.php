@@ -93,7 +93,7 @@
       	$obj->table = 'test';
 		$obj->connect();
 
-	if (empty ($edit))
+	if (empty ($edit) && empty ($post))
 	{
 		echo $obj->home_admin();
 			
@@ -176,11 +176,12 @@
 			
 			header("location: index.php");
 
-			echo $obj->edit_delete_post();
-
 			if ( $_POST )
-      		$obj->write($_POST);
+      		$obj->update($_POST);
 		}
+	}elseif ( !empty ($post)) {
+	
+		include 'html/admin_form_edit.php';
 		
 	}
 ?>

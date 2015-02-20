@@ -112,7 +112,7 @@ MySQL_QUERY;
     		}
   		}
 		
-		public function edit() {
+		public function update() {
     if ( $_POST['title'] )
       $title = mysql_real_escape_string($_POST['title']);
     if ( $_POST['bodytext'])
