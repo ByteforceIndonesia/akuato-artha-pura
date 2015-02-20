@@ -79,6 +79,8 @@
 	
 	if (!empty($_GET['edit'])) {
 	$edit = $_GET['edit'];
+	}elseif (!empty($_GET['p'])){
+	$post = $_GET['p'];
 	}
 	
 	include_once('class/cms.php');
@@ -103,10 +105,11 @@
 			
 			header("location: index.php");
 			
-			echo $obj->edit_add_new();
-			
 			if ( $_POST )
       		$obj->write($_POST);
+      		header:("location: admin.php");
+			
+			echo $obj->edit_add_new();
 			
 			
 		}elseif ( $edit == '2' )
@@ -156,16 +159,27 @@
 			
 			if ( $_POST )
       		$obj->write($_POST);
-      			
+
 		}elseif ( $edit == '6')
 		{
 
 			if(!@$_SESSION["login_username"])
 			
 			header("location: index.php");
-			
+
 			echo $obj->edit_delete_post();
+
+		}elseif ( $edit == '99')
+		{
+
+			if(!@$_SESSION["login_username"])
 			
+			header("location: index.php");
+
+			echo $obj->edit_delete_post();
+
+			if ( $_POST )
+      		$obj->write($_POST);
 		}
 		
 	}

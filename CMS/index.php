@@ -94,10 +94,10 @@ $ifhp = ": Best Instrument, Valve, & Fitting Provider";
 	
       $obj = new cms();
 	  
-	$obj->host = 'localhost';
-      	$obj->username = 'k6958942_cmsuser';
-      	$obj->password = 'cmsuser';
-      	$obj->table = 'k6958942_cmsre';
+		$obj->host = 'localhost';
+      	$obj->username = 'root';
+      	$obj->password = '';
+      	$obj->table = 'test';
 		
 		$obj->connect();
 

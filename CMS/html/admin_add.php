@@ -3,7 +3,7 @@
 <div class="row form">
 <div class="large-6 medium-6 small-10 large-centered medium-centered small-centered columns">
 	<h2 align="center">Add New Post</h2>
-		<form action="admin.php?admin=2" method="post" align="left" enctype="multipart/form-data" data-abide> 
+		<form action="admin.php?edit=1" method="post" align="left" enctype="multipart/form-data" data-abide> 
 		<div class="row collapse">
 			<div class="large-2 small-3 columns">
       			<span class="prefix ">Title:</span></div>
